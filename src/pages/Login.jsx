@@ -44,7 +44,7 @@ export default function Login() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
             required
@@ -56,6 +56,7 @@ export default function Login() {
             autoFocus
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            
           />
           <TextField
             margin="normal"
@@ -68,6 +69,7 @@ export default function Login() {
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            
           />
 
           <Button
