@@ -8,9 +8,10 @@ const authSlice = createSlice ({
 name:"auth",
 initialState,
 reducers:{
-    setUser: (state, action) => {
-        //* action açıp payload şeklindede yazabilirsin. acition yerine {payload} state.user=payload;
-        state.user = action.payload
+    setUser: (state, {payload}) => {
+        //* action açıp payload şeklindede yazabilirsin. acition yerine {payload} state.user=payload; ya da ikinci parametre action olacak şekilde yazılır. setUsersetUser: (state, action) => {state.user = action.payload},
+        // state.user = action.payload
+        state.user = payload;
 
     },
 

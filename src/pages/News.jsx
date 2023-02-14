@@ -11,7 +11,7 @@ import { getNews, clearNewsList } from "../features/newsSlice";
 import loadinGif from "../assets/loading.gif"
 
 const News = () => {
-  const { newsList , loading, error } = useSelector((state) => state.news);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,6 +21,8 @@ const News = () => {
    };
 
   }, []);
+
+ const { newsList , loading, error } = useSelector((state) => state.news);
 
   return (
     <>

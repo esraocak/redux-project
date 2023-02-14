@@ -13,11 +13,11 @@ export const getNews = createAsyncThunk (
 
   async (thunkAPI, { rejectWithValue }) => { //* asyn callback function
 
-    const API_KEY ="0d3a5f16ceec420f86fc22eb5c2aae78";
+    const API_KEY = "02d142c50d8b4247b974b2532343517";
     const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
     try {
       const { data } = await axios (url);
-      console.log(data.articles)
+      console.log(data)
       return data.articles;
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    clearNewsList : (state)=>{
+    clearNewList : (state)=>{
     state.newsList =[];
     },
   },
